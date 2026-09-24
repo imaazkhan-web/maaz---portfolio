@@ -206,7 +206,7 @@ const projectData = {
     results: '• Built for 50+ local restaurants\n• Handles 200+ daily food orders\n• Bilingual UI serving 5000+ users\n• Reduced phone order time by 70%\n• Real-time order tracking system\n• 95% customer satisfaction rate',
     stack: ['React.js', 'Firebase Auth', 'Firestore Database', 'Tailwind CSS', 'Firebase Storage', 'Context API'],
     live: 'https://peshawar-food-explorer.freedev.app',
-    github: 'https://github.com/mzmaaz08-commits'
+    github: 'https://github.com/imaazkhan-web'
   },
   2: {
     title: 'Madrassa Management System',
@@ -217,7 +217,7 @@ const projectData = {
     results: '• Manages 300+ student records\n• Tracks daily attendance digitally\n• Reduced admin workload by 60%\n• Generated 500+ automated reports\n• Zero data loss with backups\n• Used by 3 local madrassas',
     stack: ['HTML5', 'CSS3', 'Vanilla JavaScript', 'LocalStorage API', 'Responsive Design', 'Print Stylesheets'],
     live: '../madrassa-website/index.html',
-    github: 'https://github.com/mzmaaz08-commits'
+    github: 'https://github.com/imaazkhan-web'
   },
   3: {
     title: 'AI Chatbot Assistant',
@@ -228,7 +228,7 @@ const projectData = {
     results: '• Handles 1000+ queries monthly\n• 95% response accuracy rate\n• Avg response time: 2 seconds\n• Reduced support costs by 80%\n• 24/7 availability\n• Multi-language support ready',
     stack: ['JavaScript ES6+', 'AI API Integration', 'CSS3 Animations', 'DOM Manipulation', 'LocalStorage', 'Fetch API'],
     live: '../ai-chatbot-dashboard/index.html',
-    github: 'https://github.com/mzmaaz08-commits'
+    github: 'https://github.com/imaazkhan-web'
   },
   4: {
     title: 'Vogue Studio ERP & POS',
@@ -239,7 +239,7 @@ const projectData = {
     results: '• Processes 500+ transactions/month\n• Manages inventory of 2000+ items\n• Tracks 1500+ customer profiles\n• Generated PKR 2M+ in sales\n• Reduced inventory errors by 85%\n• Increased repeat customers by 40%',
     stack: ['React.js', 'Firebase Firestore', 'Firebase Auth', 'CSS3', 'Chart.js', 'React Router'],
     live: '../clothing-brand-manager/index.html',
-    github: 'https://github.com/mzmaaz08-commits'
+    github: 'https://github.com/imaazkhan-web'
   },
   5: {
     title: 'DevHub Platform',
@@ -250,7 +250,7 @@ const projectData = {
     results: '• Hosts 150+ code snippets\n• 50+ project showcases\n• 30+ published tutorials\n• 200+ registered developers\n• 1000+ code snippet views\n• Active community engagement',
     stack: ['HTML5', 'CSS3', 'JavaScript ES6+', 'LocalStorage', 'Responsive Design', 'Prism.js Syntax Highlighting'],
     live: 'https://devhub.infinityfreeapp.com',
-    github: 'https://github.com/mzmaaz08-commits'
+    github: 'https://github.com/imaazkhan-web'
   },
   6: {
     title: 'Vogue Studio Landing Page',
@@ -261,7 +261,7 @@ const projectData = {
     results: '• 300+ monthly visitors\n• 45% conversion rate (industry avg: 15%)\n• 80+ appointment bookings\n• 3-second average load time\n• 95+ Google PageSpeed score\n• Featured in design showcases',
     stack: ['HTML5', 'CSS3 Animations', 'JavaScript', 'CSS Grid & Flexbox', 'Responsive Images', 'Form Validation'],
     live: '../clothing-brand-landing/index.html',
-    github: 'https://github.com/mzmaaz08-commits'
+    github: 'https://github.com/imaazkhan-web'
   },
   7: {
     title: 'Velocity Motors Landing Page',
@@ -272,7 +272,7 @@ const projectData = {
     results: '• 800+ monthly visitors\n• 150+ test drive bookings\n• 45+ cars sold in 6 months\n• 40% lead conversion rate\n• PKR 5M+ sales revenue\n• 4.8/5 average customer rating',
     stack: ['HTML5', 'CSS3', 'JavaScript ES6+', 'LocalStorage API', 'Responsive Design', 'Form Validation'],
     live: '../apps/car-dealership-landing/index.html',
-    github: 'https://github.com/mzmaaz08-commits'
+    github: 'https://github.com/imaazkhan-web'
   }
 }
 
@@ -380,7 +380,7 @@ document.getElementById('nextBtn').addEventListener('click', () => {
 
 // ===== COPY EMAIL =====
 window.copyEmail = function() {
-  navigator.clipboard.writeText('imaazdev00@gmail.com').then(() => {
+  navigator.clipboard.writeText('imaazkhan317@gmail.com').then(() => {
     const icon = document.getElementById('copyIcon')
     icon.className = 'fa fa-check'
     showToast('✅ Email copied to clipboard!')
@@ -448,7 +448,7 @@ contactForm.addEventListener('submit', async e => {
     console.error('FAILED...', error)
     btn.innerHTML = '<i class="fa fa-exclamation-triangle"></i> Failed to send'
     btn.style.background = 'var(--error, #ef4444)'
-    showToast('❌ Failed to send message. Please try emailing directly at imaazdev00@gmail.com')
+    showToast('❌ Failed to send message. Please try emailing directly at imaazkhan317@gmail.com')
     
     setTimeout(() => {
       btn.innerHTML = originalHTML
