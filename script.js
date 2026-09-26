@@ -216,8 +216,8 @@ const projectData = {
     solution: 'Developed a complete web-based management system with student enrollment and profile management, digital attendance tracking with date-wise records, fee management with payment history, teacher dashboards for class management, performance report cards and progress tracking, parent communication portal, and automated data backup using localStorage.',
     results: '• Manages 300+ student records\n• Tracks daily attendance digitally\n• Reduced admin workload by 60%\n• Generated 500+ automated reports\n• Zero data loss with backups\n• Used by 3 local madrassas',
     stack: ['HTML5', 'CSS3', 'Vanilla JavaScript', 'LocalStorage API', 'Responsive Design', 'Print Stylesheets'],
-    live: '../madrassa-website/index.html',
-    github: 'https://github.com/imaazkhan-web'
+    live: 'https://imaazkhan-web.github.io/madrassa-website/',
+    github: 'https://github.com/imaazkhan-web/madrassa-website'
   },
   3: {
     title: 'AI Chatbot Assistant',
@@ -227,8 +227,8 @@ const projectData = {
     solution: 'Built an AI chatbot integrated with modern natural language processing API, featuring real-time conversation interface with typing indicators, persistent conversation history using localStorage, context-aware responses for better accuracy, dark/light theme support for user preference, message timestamps and read receipts, and copy-to-clipboard functionality.',
     results: '• Handles 1000+ queries monthly\n• 95% response accuracy rate\n• Avg response time: 2 seconds\n• Reduced support costs by 80%\n• 24/7 availability\n• Multi-language support ready',
     stack: ['JavaScript ES6+', 'AI API Integration', 'CSS3 Animations', 'DOM Manipulation', 'LocalStorage', 'Fetch API'],
-    live: '../ai-chatbot-dashboard/index.html',
-    github: 'https://github.com/imaazkhan-web'
+    live: 'https://imaazkhan-web.github.io/AI-Chatbot-Dashbord/',
+    github: 'https://github.com/imaazkhan-web/AI-Chatbot-Dashbord'
   },
   4: {
     title: 'Vogue Studio ERP & POS',
@@ -238,8 +238,8 @@ const projectData = {
     solution: 'Created an all-in-one ERP system with real-time POS for instant sales processing, comprehensive inventory management with low-stock alerts, customer CRM with purchase history and preferences, employee management with role-based access, sales analytics with visual charts and reports, invoice generation and printing, Firebase backend for real-time synchronization, and mobile-responsive design for tablet POS usage.',
     results: '• Processes 500+ transactions/month\n• Manages inventory of 2000+ items\n• Tracks 1500+ customer profiles\n• Generated PKR 2M+ in sales\n• Reduced inventory errors by 85%\n• Increased repeat customers by 40%',
     stack: ['React.js', 'Firebase Firestore', 'Firebase Auth', 'CSS3', 'Chart.js', 'React Router'],
-    live: '../clothing-brand-manager/index.html',
-    github: 'https://github.com/imaazkhan-web'
+    live: 'https://imaazkhan-web.github.io/clothing-brand-manager/',
+    github: 'https://github.com/imaazkhan-web/clothing-brand-manager'
   },
   5: {
     title: 'DevHub Platform',
@@ -260,8 +260,8 @@ const projectData = {
     solution: 'Designed a custom landing page with smooth scroll animations and transitions, stunning image gallery with lightbox preview, service cards with hover effects, testimonials carousel for social proof, integrated contact and booking form, mobile-responsive elegant design, fast loading with optimized images, and brand-focused color scheme and typography.',
     results: '• 300+ monthly visitors\n• 45% conversion rate (industry avg: 15%)\n• 80+ appointment bookings\n• 3-second average load time\n• 95+ Google PageSpeed score\n• Featured in design showcases',
     stack: ['HTML5', 'CSS3 Animations', 'JavaScript', 'CSS Grid & Flexbox', 'Responsive Images', 'Form Validation'],
-    live: '../clothing-brand-landing/index.html',
-    github: 'https://github.com/imaazkhan-web'
+    live: 'https://imaazkhan-web.github.io/clothing-brand-landing/',
+    github: 'https://github.com/imaazkhan-web/clothing-brand-landing'
   },
   7: {
     title: 'Velocity Motors Landing Page',
@@ -271,8 +271,8 @@ const projectData = {
     solution: 'Built a complete automotive dealership platform with live car inventory management system, interactive car financing calculator with EMI breakdown, trade-in/sell car form for customer vehicles, test drive booking with calendar integration, customer reviews and testimonials section, luxury dark theme with premium branding, mobile-responsive design for all devices, and lead capture forms integrated throughout.',
     results: '• 800+ monthly visitors\n• 150+ test drive bookings\n• 45+ cars sold in 6 months\n• 40% lead conversion rate\n• PKR 5M+ sales revenue\n• 4.8/5 average customer rating',
     stack: ['HTML5', 'CSS3', 'JavaScript ES6+', 'LocalStorage API', 'Responsive Design', 'Form Validation'],
-    live: '../apps/car-dealership-landing/index.html',
-    github: 'https://github.com/imaazkhan-web'
+    live: 'https://imaazkhan-web.github.io/car-dealership-landing/',
+    github: 'https://github.com/imaazkhan-web/car-dealership-landing'
   }
 }
 
@@ -448,13 +448,18 @@ contactForm.addEventListener('submit', async e => {
     console.error('FAILED...', error)
     btn.innerHTML = '<i class="fa fa-exclamation-triangle"></i> Failed to send'
     btn.style.background = 'var(--error, #ef4444)'
-    showToast('❌ Failed to send message. Please try emailing directly at imaazkhan317@gmail.com')
+    showToast('❌ Form error! Opening direct email / WhatsApp options...')
     
+    // Fallback: Open mailto directly after 1 second
+    const subject = encodeURIComponent(`Portfolio Inquiry from ${formData.name}`)
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nProject: ${formData.project_type}\n\nMessage:\n${formData.message}`)
+    window.open(`mailto:imaazkhan317@gmail.com?subject=${subject}&body=${body}`, '_blank')
+
     setTimeout(() => {
       btn.innerHTML = originalHTML
       btn.disabled = false
       btn.style.background = ''
-    }, 3000)
+    }, 4000)
   }
 })
 
