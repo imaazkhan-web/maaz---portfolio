@@ -378,6 +378,14 @@ document.getElementById('nextBtn').addEventListener('click', () => {
   startCarousel()
 })
 
+// ===== DOWNLOAD CV =====
+window.downloadCV = function() {
+  showToast('📄 Opening CV Request via Email / WhatsApp...')
+  const subject = encodeURIComponent('CV / Resume Request - Maaz Wakeel')
+  const body = encodeURIComponent('Hi Maaz,\n\nI visited your portfolio website and would like to request your latest CV / Resume.\n\nBest regards,')
+  window.open(`mailto:imaazkhan317@gmail.com?subject=${subject}&body=${body}`, '_blank')
+}
+
 // ===== COPY EMAIL =====
 window.copyEmail = function() {
   navigator.clipboard.writeText('imaazkhan317@gmail.com').then(() => {
